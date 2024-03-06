@@ -13,7 +13,7 @@ bool setFlag = false;
 int refreshClk = 0;
 
 // There is a active-low button switch connected to the pin D8
-#define BUTTON_PIN D8
+#define BUTTON_PIN D9
 
 // There is a potentiometer connected to the pin A9
 #define POT_PIN A9
@@ -33,9 +33,23 @@ void setup(void)
   motor1.zero();
   // start moving towards the center of the range
   motor1.setPosition(STEPS/2);
-  motor1.update();
-  delay(1000);
+  while (motor1.currentStep != motor1.targetStep) {
+    motor1.update();
+    delay(1);
+  }
 
+
+  motor1.setPosition(STEPS);
+  while (motor1.currentStep != motor1.targetStep) {
+    motor1.update();
+    delay(1);
+  }
+
+  motor1.setPosition(0);
+  while (motor1.currentStep != motor1.targetStep) {
+    motor1.update();
+    delay(1);
+  }
 
   // initialize the wire
   Wire.begin();
@@ -83,7 +97,8 @@ void loop(void)
   // only use the top-2 digits
   potValue = potValue / 100;
   // map the potentiometer value to the motor position
-  int motorPosition = map(potValue, 10, 40, 0, STEPS-1);
+  int motorPosition = map(potValue, 4, 40, 0, STEPS-1);
+  motorPosition = max(0, min(STEPS-1, motorPosition));
 
   if (!buttonReleased) {
     nextPos = motorPosition;
@@ -117,7 +132,7 @@ void loop(void)
     refreshClk = 0;
   }
   refreshClk++;
-  delay(2);
+  delay(1);
 
   // if ((motor1.currentStep == motor1.targetStep) && setFlag) {
   //   nextPos = 0;

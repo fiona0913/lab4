@@ -190,7 +190,7 @@ In that case ground the XIAO RST (reset) pad twice in quick succession and the b
 
 Uploading will work when the XIAO is in this mode.
 
-# Installing Display Libraries
+# 3. OLED Display
 
 Now that our Hello World project is setup lets try to use external libraries in PlatformIO. We will try to use the Arduino libraries for the SSD1306 OLED display.
 
@@ -281,6 +281,13 @@ void loop(){
   delay(2000);
 }
 ```
+
+# 4. Import Arduino Project
+You can import an Arduino project by pressing the “Import Arduino Project” button and pointing it to the folder.
+![](images/import_1.png)
+Then, a warning will show up.
+![](images/import_2.png)
+You can dismiss it and the `.ino` can be compiled sometimes without any modifications. If some errors occur, please refer to [Convert Arduino file to C++ manually](https://docs.platformio.org/en/latest/faq/ino-to-cpp.html) and [Arduino to PlatformIO project conversion](https://willem.aandewiel.nl/index.php/2024/08/16/arduino-to-platformio-project-conversion/) to modify the code.
 
 # Appendix: GitHub Copilot
 

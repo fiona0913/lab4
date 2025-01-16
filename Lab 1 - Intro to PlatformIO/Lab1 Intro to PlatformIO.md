@@ -289,6 +289,15 @@ Then, a warning will show up.
 ![](images/import_2.png)
 You can dismiss it and the `.ino` can be compiled sometimes without any modifications. If some errors occur, please refer to [Convert Arduino file to C++ manually](https://docs.platformio.org/en/latest/faq/ino-to-cpp.html) and [Arduino to PlatformIO project conversion](https://willem.aandewiel.nl/index.php/2024/08/16/arduino-to-platformio-project-conversion/) to modify the code.
 If you use Qt Py rp 2040, please follow this [Set up PlatformIO for development on the Adafruit QT Py RP2040](https://digitalme.co/posts/pico-on-pio)
+```
+[env]
+platform = https://github.com/maxgerhardt/platform-raspberrypi.git
+framework = arduino
+board_build.core = earlephilhower
+
+[env:qtpy2040]
+board = adafruit_qtpy
+```
 
 # Appendix: GitHub Copilot
 

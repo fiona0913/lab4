@@ -103,3 +103,7 @@ platform = espressif32
 board = seeed_xiao_esp32s3
 framework = arduino
 ```
+
+Q: Which pin is pin 1?
+A: Usually, you can find it in datasheet. For the TPS793, please follow this figure:
+![](image/Lab2_component_selection/TPS793.png)

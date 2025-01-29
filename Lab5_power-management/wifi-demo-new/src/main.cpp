@@ -10,10 +10,10 @@
 
 
 #define WIFI_SSID "UW MPSK"
-#define WIFI_PASSWORD "ie-94;W^Mq"
+#define WIFI_PASSWORD "YourPassword" // Replace with your network password
 
-#define DATABASE_SECRET "AIzaSyAlBn4KiKXKVDZhBCGizbZZvOsBEc5KpY0"
-#define DATABASE_URL "https://esp32-demo-jiexin-default-rtdb.firebaseio.com/"
+#define DATABASE_SECRET "YourAPIKey" // Replace with your database URL
+#define DATABASE_URL "https://xxx.firebaseio.com/" // Replace with your API key
 
 #define STAGE_INTERVAL 12000 // 12 seconds each stage
 #define MAX_WIFI_RETRIES 5 // Maximum number of WiFi connection retries

@@ -81,6 +81,10 @@ void loop() {
 
 Follow the instructions from **step 1 to 4** on the link [here](https://randomnerdtutorials.com/esp32-firebase-realtime-database/).
 
+The Firebase-ESP-Client Library mentioned in the [here](https://randomnerdtutorials.com/esp32-firebase-realtime-database/) is deprecated. Installed FirebaseClient library instead.
+![](images/firebase_lib.png)
+Use [this code](https://github.com/mobizt/FirebaseClient/blob/main/examples/RealtimeDatabase/Simple/SimpleDatabaseSecret/SimpleDatabaseSecret.ino) to test the Firebase.
+
 ## 5. Download nRF Connect for Desktop and J-Link Configurator V7.88j (if you have not done so already)
 
 Find the software on this [website](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-desktop/Download#infotabs) and then install the Power Profiler App to connect with the Power Profiler Kit (see image below). Also, install the J-LINK (**version V7.88j**) Configurator software. The link of downloading J-LINK is [here](https://www.segger.com/downloads/jlink/).

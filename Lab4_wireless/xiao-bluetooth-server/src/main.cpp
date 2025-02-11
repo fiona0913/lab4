@@ -15,8 +15,8 @@ const long interval = 1000;
 // TODO: add new global variables for your sensor readings and processed data
 
 // TODO: Change the UUID to your own (any specific one works, but make sure they're different from others'). You can generate one here: https://www.uuidgenerator.net/
-#define SERVICE_UUID        "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
-#define CHARACTERISTIC_UUID "beb5483e-36e1-4688-b7f5-ea07361b26a8"
+#define SERVICE_UUID        "37f06a52-7bda-477b-a0c7-d35f20bbb229"
+#define CHARACTERISTIC_UUID "575af097-df00-48b5-bd64-c54a182f3773"
 
 class MyServerCallbacks : public BLEServerCallbacks {
     void onConnect(BLEServer* pServer) {
